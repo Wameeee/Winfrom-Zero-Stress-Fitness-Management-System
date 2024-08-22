@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{F1AE6DC1-1439-49A4-8F9A-38CA07359EC7}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>健身房管理</RootNamespace>
+        <AssemblyName>健身房管理</AssemblyName>
+        <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Guna.UI">
+            <HintPath>..\..\Users\Administrator\Desktop\Guna.UI-ChatApp-DarkUI-master\ChatAppDarkUI\ChatAppDarkUI\bin\Debug\Guna.UI.dll</HintPath>
+        </Reference>
+        <Reference Include="Guna.UI2">
+            <HintPath>..\..\Users\Administrator\Desktop\Dark-Dashboard-UI-master\Dark Dashboard UI\bin\Debug\Guna.UI2.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.VisualBasic"/>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Management"/>
+        <Reference Include="System.ServiceProcess"/>
+        <Reference Include="System.Xml.Linq"/>
+        <Reference Include="System.Data.DataSetExtensions"/>
+        <Reference Include="Microsoft.CSharp"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Deployment"/>
+        <Reference Include="System.Drawing"/>
+        <Reference Include="System.Net.Http"/>
+        <Reference Include="System.Windows.Forms"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="DashForm.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="DashForm.Designer.cs">
+            <DependentUpon>DashForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Login.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Login.designer.cs">
+            <DependentUpon>Login.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Member\mAdd.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Member\mAdd.Designer.cs">
+            <DependentUpon>mAdd.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Member\mModify.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Member\mModify.Designer.cs">
+            <DependentUpon>mModify.cs</DependentUpon>
+        </Compile>
+        <Compile Include="print\PrintDGV.cs"/>
+        <Compile Include="print\PrintOptions.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="print\PrintOptions.designer.cs">
+            <DependentUpon>PrintOptions.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Program.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Goods\UserApparatus.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Goods\UserApparatus.Designer.cs">
+            <DependentUpon>UserApparatus.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Uconcerning.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Uconcerning.Designer.cs">
+            <DependentUpon>Uconcerning.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UGoods.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UGoods.Designer.cs">
+            <DependentUpon>UGoods.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Umessage.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Umessage.Designer.cs">
+            <DependentUpon>Umessage.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UserConsume.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UserConsume.Designer.cs">
+            <DependentUpon>UserConsume.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UserDashForm.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="UserDashForm.Designer.cs">
+            <DependentUpon>UserDashForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Lost\UserLost.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Lost\UserLost.Designer.cs">
+            <DependentUpon>UserLost.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Member\UserMember.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Member\UserMember.Designer.cs">
+            <DependentUpon>UserMember.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Goods\UserGodsModify.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Goods\UserGodsModify.Designer.cs">
+            <DependentUpon>UserGodsModify.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Goods\UserGoodsAdd.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Goods\UserGoodsAdd.Designer.cs">
+            <DependentUpon>UserGoodsAdd.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UserInfo.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UserInfo.Designer.cs">
+            <DependentUpon>UserInfo.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UserMessage.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UserMessage.Designer.cs">
+            <DependentUpon>UserMessage.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UsersHome.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UsersHome.Designer.cs">
+            <DependentUpon>UsersHome.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Lost\wuyiAdd.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Lost\wuyiAdd.Designer.cs">
+            <DependentUpon>wuyiAdd.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Lost\wuyiModify.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Lost\wuyiModify.Designer.cs">
+            <DependentUpon>wuyiModify.cs</DependentUpon>
+        </Compile>
+        <Compile Include="注册.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="注册.Designer.cs">
+            <DependentUpon>注册.cs</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="DashForm.resx">
+            <DependentUpon>DashForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Login.resx">
+            <DependentUpon>Login.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Member\mAdd.resx">
+            <DependentUpon>mAdd.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Member\mModify.resx">
+            <DependentUpon>mModify.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="print\PrintOptions.resx">
+            <DependentUpon>PrintOptions.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="Goods\UserApparatus.resx">
+            <DependentUpon>UserApparatus.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Uconcerning.resx">
+            <DependentUpon>Uconcerning.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UGoods.resx">
+            <DependentUpon>UGoods.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Umessage.resx">
+            <DependentUpon>Umessage.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UserConsume.resx">
+            <DependentUpon>UserConsume.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UserDashForm.resx">
+            <DependentUpon>UserDashForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Lost\UserLost.resx">
+            <DependentUpon>UserLost.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Member\UserMember.resx">
+            <DependentUpon>UserMember.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Goods\UserGodsModify.resx">
+            <DependentUpon>UserGodsModify.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Goods\UserGoodsAdd.resx">
+            <DependentUpon>UserGoodsAdd.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UserInfo.resx">
+            <DependentUpon>UserInfo.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UserMessage.resx">
+            <DependentUpon>UserMessage.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UsersHome.resx">
+            <DependentUpon>UsersHome.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Lost\wuyiAdd.resx">
+            <DependentUpon>wuyiAdd.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Lost\wuyiModify.resx">
+            <DependentUpon>wuyiModify.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="注册.resx">
+            <DependentUpon>注册.cs</DependentUpon>
+        </EmbeddedResource>
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+        <Compile Include="Properties\Settings.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Settings.settings</DependentUpon>
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="BLL\BLL.csproj">
+            <Project>{f0ea6543-bc7c-4f7d-9499-4951abd351eb}</Project>
+            <Name>BLL</Name>
+        </ProjectReference>
+        <ProjectReference Include="DAL\DAL.csproj">
+            <Project>{3a344ca7-1524-4621-bdfe-53419fb1f183}</Project>
+            <Name>DAL</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="User\"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+</Project>
